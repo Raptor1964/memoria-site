@@ -3,46 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memoria App - Sito Ufficiale</title>
+    <title>Digital Safe - Memoria | La tua Cassaforte di Account</title>
     <meta name="google-site-verification" content="YY6vXj_owMVfDyboP6oXjEadIAuptWsFOmvhukXmXQI" />
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; }
-        header img { max-width: 120px; height: auto; margin-bottom: 10px; }
-        main { text-align: left; margin-top: 30px; }
-        footer { margin-top: 50px; font-size: 0.9em; }
-        .logo-container { margin-bottom: 20px; }
+        :root { --primary: #2980b9; --dark: #2c3e50; --light: #f8f9fa; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 950px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--light) 0%, #e9ecef 100%); border-radius: 20px; margin-bottom: 40px; }
+        .logo { max-width: 120px; height: auto; margin-bottom: 20px; }
+        h1 { color: var(--dark); font-size: 2.8em; margin: 0; }
+        .tagline { font-size: 1.3em; color: #555; margin: 15px 0 30px; }
+        .btn-play { background: #000; color: #fff; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; transition: 0.3s; }
+        .btn-play:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 50px 0; }
+        .feature-card { padding: 30px; border-radius: 15px; background: #fff; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        .feature-card h3 { color: var(--primary); font-size: 1.5em; margin-bottom: 15px; }
+        
+        .how-it-works { padding: 40px; background: var(--dark); color: #fff; border-radius: 20px; text-align: center; }
+        .how-it-works h2 { color: #fff; margin-bottom: 30px; }
+        
+        footer { margin-top: 60px; text-align: center; padding: 40px; border-top: 1px solid #eee; }
+        .footer-links a { margin: 0 15px; color: var(--primary); text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo Memoria App">
+
+<header>
+    <img src="logo.png" alt="Logo Digital Safe Memoria" class="logo">
+    <h1>Digital Safe - Memoria</h1>
+    <p class="tagline">Gestione e archiviazione sicura dei tuoi account. Semplice, Gratuita, Etica.</p>
+    <a href="https://play.google.com/store/search?q=digital+safe+memoria&c=apps&hl=it" class="btn-play">Scarica su Google Play Store</a>
+</header>
+
+<main>
+    <section class="grid">
+        <div class="feature-card">
+            <h3>Archivio Crittografato</h3>
+            <p>I tuoi account non viaggiano mai su server sconosciuti. Tutto viene salvato in un database locale sul tuo smartphone con crittografia ad alto livello.</p>
         </div>
-        <h1>Memoria</h1>
-        <p><em>Gestisci i tuoi account in modo sicuro.</em></p>
-    </header>
+        <div class="feature-card">
+            <h3>Backup Personale</h3>
+            <p>Usa il tuo spazio Google Drive per i backup. L'app accede solo ai propri file (scope <code>drive.file</code>), lasciando privati tutti gli altri tuoi documenti.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Recupero Assistito</h3>
+            <p>Se dimentichi la password d'accesso, il nostro servizio email ti permette di recuperare le credenziali in modo sicuro e veloce.</p>
+        </div>
+    </section>
 
-    <main>
-        <section>
-            <h2>Cos'è Memoria?</h2>
-            <p>Memoria è un'applicazione progettata per aiutarti a organizzare e proteggere i tuoi dati personali. 
-            L'app utilizza un database locale sicuro e offre la possibilità di salvare copie di sicurezza direttamente sul tuo spazio Google Drive.</p>
-        </section>
+    <section class="how-it-works">
+        <h2>Perché scegliere Memoria?</h2>
+        <p>In un mondo di abbonamenti e cloud insicuri, Memoria ti restituisce il controllo totale. <br>È lo strumento ideale per chi cerca una cassaforte digitale senza complicazioni tecniche.</p>
+    </section>
+</main>
 
-        <section>
-            <h2>Integrazione con Google Drive</h2>
-            <p>Per garantirti la massima sicurezza, Memoria permette di effettuare il backup dei dati. 
-            L'accesso a Google Drive è limitato esclusivamente ai file creati dall'applicazione stessa (scope drive.file), garantendo la totale privacy degli altri tuoi documenti.</p>
-        </section>
-    </main>
+<footer>
+    <div class="footer-links">
+        <a href="privacy.html">Informativa sulla Privacy</a>
+        <a href="mailto:memoriaapp64@gmail.com">Contatta lo Sviluppatore</a>
+    </div>
+    <p style="margin-top: 30px; color: #888;">&copy; 2026 Giancarlo De Rosa - P.IVA/CF: [Opzionale] | Digital Safe Memoria</p>
+</footer>
 
-    <footer>
-        <hr>
-        <p>
-            <a href="privacy.html">Informativa sulla Privacy</a> | 
-            Sviluppato da Giancarlo | 
-            Contatto: <a href="mailto:giancarlo.der@gmail.com">giancarlo.der@gmail.com</a>
-        </p>
-    </footer>
 </body>
 </html>
