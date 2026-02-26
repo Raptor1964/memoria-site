@@ -3,38 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativa sulla Privacy - Memoria</title>
+    <title>Informativa sulla Privacy - Digital Safe Memoria</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        h1 { color: #333; }
+        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        .box { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
+        footer { margin-top: 50px; text-align: center; font-size: 0.9em; color: #666; border-top: 1px solid #eee; padding-top: 20px; }
+        a { color: #2980b9; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="logo.png" alt="Logo Memoria" width="100">
-    </div>
-    <h1>Informativa sulla Privacy per l'App "Memoria"</h1>
-    <p>Ultimo aggiornamento: 18 febbraio 2026</p>
 
-    <p>Questa informativa descrive come l'applicazione <strong>Memoria</strong> gestisce i dati degli utenti, con particolare attenzione all'integrazione con i servizi Google.</p>
+    <h1>Informativa sulla Privacy</h1>
+    <p><em>Ultimo aggiornamento: 26 Febbraio 2026</em></p>
 
-    <h2>1. Raccolta dei Dati</h2>
-    <p>L'applicazione Memoria non raccoglie, non memorizza su server esterni e non condivide alcun dato personale dell'utente. Tutti i dati inseriti nell'app rimangono esclusivamente all'interno del database locale sul dispositivo dell'utente.</p>
+    <p>Questa informativa descrive il trattamento dei dati personali operato dall'applicazione <strong>Digital Safe - Memoria</strong> sviluppata da <strong>Giancarlo De Rosa</strong>.</p>
 
-    <h2>2. Utilizzo di Google Drive</h2>
-    <p>Memoria richiede l'accesso al tuo account Google esclusivamente per la funzionalità di backup e ripristino. L'accesso è limitato tramite lo scope <code>https://www.googleapis.com/auth/drive.file</code>. Questo significa che:</p>
+    <h2>1. Raccolta dei Dati e Finalità</h2>
+    <p>L'applicazione è progettata per funzionare principalmente in modalità locale. Tuttavia, raccoglie i seguenti dati per finalità specifiche:</p>
     <ul>
-        <li>L'app può visualizzare e gestire <strong>solo</strong> i file che essa stessa ha creato (i file di backup).</li>
-        <li>L'app <strong>non può</strong> vedere, leggere o eliminare altri documenti presenti sul tuo Google Drive.</li>
+        <li><strong>Indirizzo Email:</strong> Utilizzato esclusivamente su richiesta dell'utente per il servizio di recupero della password di accesso all'app.</li>
+        <li><strong>Account Google:</strong> Necessario per abilitare la funzione di backup opzionale su Google Drive.</li>
     </ul>
 
-    <h2>3. Condivisione dei Dati</h2>
-    <p>Nessun dato viene condiviso con terze parti. Il collegamento con Google Drive avviene tramite una connessione sicura e diretta tra l'applicazione e i server di Google.</p>
+    <h2>2. Utilizzo di Google Drive (Scope OAuth)</h2>
+    <div class="box">
+        <p>L'app richiede l'accesso alle API di Google Drive con lo scope <code>https://www.googleapis.com/auth/drive.file</code>.</p>
+        <p><strong>Cosa significa:</strong> L'app può visualizzare, creare e gestire solo i file e le cartelle che essa stessa ha creato. Non ha alcun accesso ai tuoi altri file personali presenti su Drive.</p>
+    </div>
 
-    <h2>4. Contatti</h2>
-    <p>Per domande relative alla privacy, puoi contattare lo sviluppatore all'indirizzo email associato alla pubblicazione dell'app sul Play Store.</p>
+    <h2>3. Servizio di Recupero Account</h2>
+    <p>Qualora l'utente dimentichi la password d'accesso, può richiedere l'invio delle credenziali tramite email. È <strong>obbligo dell'utente</strong> modificare la password immediatamente dopo il primo accesso utile per ripristinare la sicurezza del database locale.</p>
 
-    <hr>
-    <p><a href="index.html">Torna alla Home Page</a></p>
+    <h2>4. Conservazione e Sicurezza</h2>
+    <ul>
+        <li>I dati degli account salvati sono crittografati localmente sul dispositivo.</li>
+        <li>Gli indirizzi email e i dati tecnici di invio vengono cancellati periodicamente (mai oltre i 90 giorni).</li>
+        <li>Nessun dato viene venduto o condiviso con terze parti.</li>
+    </ul>
+
+    <h2>5. Contatti</h2>
+    <p>Per qualsiasi domanda riguardante la privacy, puoi scrivere a: <strong>memoriaapp64@gmail.com</strong></p>
+
+    <footer>
+        <p><a href="index.html">Torna alla Home Page</a></p>
+        <p>&copy; 2026 Giancarlo De Rosa - Digital Safe Memoria</p>
+    </footer>
+
 </body>
 </html>
