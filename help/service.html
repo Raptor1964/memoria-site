@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Dettagli Account</title>
+    <title>Help - Account Details</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 5px; }
@@ -14,28 +28,35 @@
 </head>
 <body>
 
-    <h1>📄 Dettagli Account</h1>
-    <p>In questa pagina puoi visualizzare e gestire tutte le informazioni relative al servizio selezionato:</p>
+    <h1>📄 Account Details</h1>
+    <p>On this page, you can view and manage all information related to the selected service:</p>
 
     <div class="section">
-        <p><strong><span class="icon">🔑</span> ACCESSO RAPIDO:</strong> Nome utente e password sono sempre a portata di mano. Usa le icone dedicate per copiarli istantaneamente negli appunti senza doverli digitare manualmente.</p>
+        <p><strong><span class="icon">🔑</span> QUICK ACCESS:</strong> Username and password are always at hand. Use the dedicated icons to instantly copy them to your clipboard without manual typing.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">📅</span> CRONOLOGIA:</strong> Sotto il nome del servizio trovi le date relative alla vita del tuo account: la data di creazione iniziale e l'ultimo aggiornamento della password.</p>
+        <p><strong><span class="icon">📅</span> HISTORY:</strong> Below the service name, you will find dates regarding your account's lifecycle: the initial creation date and the last password update.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🌐</span> CONTENUTI EXTRA:</strong> Se inseriti, i campi 'Sito Web' e 'Note' appariranno automaticamente. Toccando il sito web aprirai direttamente il browser, mentre le note ti offrono spazio per dettagli aggiuntivi.</p>
+        <p><strong><span class="icon">🌐</span> EXTRA CONTENT:</strong> If provided, 'Website' and 'Notes' fields will appear automatically. Tapping the website will open your browser directly, while notes provide space for additional details.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🛠️</span> AZIONI RAPIDE:</strong> In fondo alla pagina trovi tre strumenti fondamentali: l'occhio per svelare la password, il cestino per eliminare l'account e l'icona modifica per variare i dati salvati.</p>
+        <p><strong><span class="icon">🛠️</span> QUICK ACTIONS:</strong> At the bottom of the page, you'll find three essential tools: the eye to reveal the password, the trash can to delete the account, and the edit icon to change the saved data.</p>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
