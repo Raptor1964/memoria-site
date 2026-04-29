@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Crittografia e Sicurezza</title>
+    <title>Help - Encryption and Security</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #e67e22; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #e67e22; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 8px; }
@@ -16,29 +30,36 @@
 </head>
 <body>
 
-    <h1>🔐 Crittografia e Sicurezza</h1>
-    <p>In questa pagina puoi gestire la protezione dei tuoi dati. La chiave di crittografia garantisce che solo tu possa accedere ai tuoi contenuti:</p>
+    <h1>🔐 Encryption and Security</h1>
+    <p>On this page, you can manage the protection of your data. The encryption key ensures that only you can access your content:</p>
 
     <div class="section">
-        <p><strong><span class="icon">🔑</span> CAMBIO CHIAVE:</strong> Inserendo una nuova chiave e salvando, l'app aggiornerà immediatamente il sistema di protezione. Scegli una chiave robusta ma che puoi ricordare facilmente.</p>
+        <p><strong><span class="icon">🔑</span> CHANGE KEY:</strong> By entering a new key and saving, the app will immediately update the protection system. Choose a strong key that you can easily remember.</p>
     </div>
 
     <div class="danger">
-        <p><strong><span class="icon">⚠️</span> COMPATIBILITÀ BACKUP:</strong> Attenzione: cambiando la chiave, tutte le vecchie copie di backup create in precedenza diventeranno <span style="text-decoration: underline;">inutilizzabili</span>.</p>
-        <p>Dopo il salvataggio, ricordati di generare e sostituire i tuoi vecchi backup con la nuova chiave.</p>
+        <p><strong><span class="icon">⚠️</span> BACKUP COMPATIBILITY:</strong> Warning: by changing the key, all old backup copies created previously will become <span style="text-decoration: underline;">unusable</span>.</p>
+        <p>After saving, remember to generate and replace your old backups using the new key.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🛡️</span> PRIVACY ASSOLUTA:</strong> Memoria <span class="secure">non memorizza</span> la tua chiave su server esterni. La tua privacy è totale, ma non possiamo recuperare i tuoi dati se perdi la chiave di accesso.</p>
+        <p><strong><span class="icon">🛡️</span> ABSOLUTE PRIVACY:</strong> Memoria <span class="secure">does not store</span> your key on external servers. Your privacy is total, but we cannot recover your data if you lose your access key.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">💾</span> SALVATAGGIO:</strong> Una volta inserita la nuova chiave, premi il tasto "Salva" per confermare. L'applicazione applicherà le modifiche in pochi istanti.</p>
+        <p><strong><span class="icon">💾</span> SAVING:</strong> Once the new key is entered, press the "Save" button to confirm. The application will apply the changes in a few moments.</p>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
