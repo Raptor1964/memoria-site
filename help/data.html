@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Gestione Database</title>
+    <title>Help - Database Management</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 8px; }
@@ -15,38 +29,45 @@
 </head>
 <body>
 
-    <h1>🗄️ Gestione Database</h1>
-    <p>In questa pagina puoi gestire la sicurezza e l'integrità dei tuoi archivi con le seguenti opzioni:</p>
+    <h1>🗄️ Database Management</h1>
+    <p>On this page, you can manage the security and integrity of your archives with the following options:</p>
 
     <div class="section">
-        <p><strong><span class="icon">💾</span> BACKUP:</strong> Salva una copia di sicurezza del database nello spazio riservato dell’app sul telefono. Utile per creare un punto di ripristino rapido.</p>
+        <p><strong><span class="icon">💾</span> BACKUP:</strong> Saves a security copy of the database in the app's reserved space on your phone. Useful for creating a quick restore point.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">⏪</span> RIPRISTINA:</strong> Elimina il database attuale e carica l’ultimo backup salvato localmente.</p>
-        <div class="warning">Attenzione: i dati inseriti dopo l'ultimo backup andranno persi.</div>
+        <p><strong><span class="icon">⏪</span> RESTORE:</strong> Deletes the current database and loads the last locally saved backup.</p>
+        <div class="warning">Warning: Any data entered after the last backup will be lost.</div>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">📤</span> CONDIVIDI DATI:</strong> Esporta una copia crittografata sulla memoria esterna o verso servizi cloud per portarli su un altro dispositivo.</p>
+        <p><strong><span class="icon">📤</span> SHARE DATA:</strong> Exports an encrypted copy to external storage or cloud services to move it to another device.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">📥</span> IMPORTA DATI:</strong> Recupera e carica un file di backup precedentemente salvato nella memoria esterna dello smartphone.</p>
+        <p><strong><span class="icon">📥</span> IMPORT DATA:</strong> Retrieves and loads a backup file previously saved on the smartphone's external memory.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">☁️</span> GOOGLE DRIVE:</strong> Accedi alla configurazione per sincronizzare, salvare o ripristinare i tuoi backup direttamente sul cloud di Google.</p>
+        <p><strong><span class="icon">☁️</span> GOOGLE DRIVE:</strong> Access the configuration to sync, save, or restore your backups directly to the Google cloud.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🔑</span> NUOVA CHIAVE:</strong> Cambia la chiave di crittografia <strong>AES-256</strong> del database.</p>
-        <div class="warning">Questa è la serratura digitale che protegge i tuoi dati: assicurati di non dimenticare la nuova chiave!</div>
+        <p><strong><span class="icon">🔑</span> NEW KEY:</strong> Changes the <strong>AES-256</strong> encryption key of the database.</p>
+        <div class="warning">This is the digital lock that protects your data: make sure you do not forget the new key!</div>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
