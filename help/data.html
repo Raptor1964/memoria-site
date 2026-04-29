@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiuto - Gestione Database</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
+        .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        .icon { font-size: 1.2em; margin-right: 8px; }
+        .warning { color: #c0392b; font-weight: bold; background: #fdedec; padding: 10px; border-radius: 5px; border-left: 5px solid #c0392b; margin-top: 5px; }
+        footer { margin-top: 30px; text-align: center; font-size: 0.8em; color: #888; border-top: 1px solid #eee; padding-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>🗄️ Gestione Database</h1>
+    <p>In questa pagina puoi gestire la sicurezza e l'integrità dei tuoi archivi con le seguenti opzioni:</p>
+
+    <div class="section">
+        <p><strong><span class="icon">💾</span> BACKUP:</strong> Salva una copia di sicurezza del database nello spazio riservato dell’app sul telefono. Utile per creare un punto di ripristino rapido.</p>
+    </div>
+
+    <div class="section">
+        <p><strong><span class="icon">⏪</span> RIPRISTINA:</strong> Elimina il database attuale e carica l’ultimo backup salvato localmente.</p>
+        <div class="warning">Attenzione: i dati inseriti dopo l'ultimo backup andranno persi.</div>
+    </div>
+
+    <div class="section">
+        <p><strong><span class="icon">📤</span> CONDIVIDI DATI:</strong> Esporta una copia crittografata sulla memoria esterna o verso servizi cloud per portarli su un altro dispositivo.</p>
+    </div>
+
+    <div class="section">
+        <p><strong><span class="icon">📥</span> IMPORTA DATI:</strong> Recupera e carica un file di backup precedentemente salvato nella memoria esterna dello smartphone.</p>
+    </div>
+
+    <div class="section">
+        <p><strong><span class="icon">☁️</span> GOOGLE DRIVE:</strong> Accedi alla configurazione per sincronizzare, salvare o ripristinare i tuoi backup direttamente sul cloud di Google.</p>
+    </div>
+
+    <div class="section">
+        <p><strong><span class="icon">🔑</span> NUOVA CHIAVE:</strong> Cambia la chiave di crittografia <strong>AES-256</strong> del database.</p>
+        <div class="warning">Questa è la serratura digitale che protegge i tuoi dati: assicurati di non dimenticare la nuova chiave!</div>
+    </div>
+
+    <footer>
+        &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
+    </footer>
+
+</body>
+</html>
