@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Google Drive Cloud</title>
+    <title>Help - Google Drive Cloud</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #4285F4; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #4285F4; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 8px; }
@@ -18,36 +32,43 @@
 <body>
 
     <h1>☁️ Google Drive Cloud</h1>
-    <p>Questa pagina ti permette di salvare i tuoi dati su Google Drive per non perderli mai.</p>
+    <p>This page allows you to save your data to Google Drive so you never lose it.</p>
 
     <div class="section">
-        <p><strong><span class="icon">🔗</span> CONNESSIONE:</strong> Accedi con il tuo account Google. Verrà creata una cartella dedicata chiamata <em>'Memoria Backups'</em>. Non eliminarla manualmente.</p>
+        <p><strong><span class="icon">🔗</span> CONNECTION:</strong> Sign in with your Google account. A dedicated folder named <em>'Memoria Backups'</em> will be created. Do not delete it manually.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🔢</span> NUMERO BACKUP:</strong> Puoi decidere quante versioni del database conservare. Una volta raggiunto il limite, l'app sovrascriverà il file più vecchio.</p>
+        <p><strong><span class="icon">🔢</span> BACKUP COUNT:</strong> You can decide how many versions of the database to keep. Once the limit is reached, the app will overwrite the oldest file.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">⚡</span> BACKUP IMMEDIATO:</strong> Invia subito i dati correnti sul cloud. Hai un massimo di 3 backup immediati sul Drive.</p>
+        <p><strong><span class="icon">⚡</span> IMMEDIATE BACKUP:</strong> Send your current data to the cloud immediately. You have a maximum of 3 immediate backups on Drive.</p>
     </div>
 
     <div class="warning-box">
-        <p><strong><span class="icon">🔄</span> RIPRISTINO:</strong> Scarica i dati dal cloud al telefono. <strong>ATTENZIONE:</strong> i dati attualmente presenti sul telefono verranno sostituiti da quelli scaricati.</p>
+        <p><strong><span class="icon">🔄</span> RESTORE:</strong> Download data from the cloud to your phone. <strong>WARNING:</strong> Current data on the phone will be replaced by the downloaded files.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🔒</span> PRIVACY:</strong> L'app accede solo alla propria cartella e non può leggere i tuoi file personali su Drive.</p>
+        <p><strong><span class="icon">🔒</span> PRIVACY:</strong> The app only accesses its own folder and cannot read your personal files on Drive.</p>
     </div>
 
     <div class="security-note">
-        <p><strong><span class="icon">🛡️</span> NOTA SULLA SICUREZZA (App non verificata)</strong></p>
-        <p>Durante l'accesso, Google potrebbe mostrare un avviso che definisce l'app come "non verificata". Questo accade perché l'app è un progetto indipendente e non dispone di un dominio web aziendale certificato. Non indica un rischio per i tuoi dati.</p>
+        <p><strong><span class="icon">🛡️</span> SECURITY NOTE (Unverified App)</strong></p>
+        <p>During login, Google might show a warning defining the app as "unverified". This happens because the app is an independent project and does not have a certified corporate web domain. It does not indicate a risk to your data.</p>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
