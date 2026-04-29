@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Modifica Servizio</title>
+    <title>Help - Edit Service</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 5px; }
@@ -15,33 +29,40 @@
 </head>
 <body>
 
-    <h1>✏️ Modifica Servizio</h1>
-    <p>Tutti i campi presenti sono editabili per riflettere i cambiamenti dei tuoi account:</p>
+    <h1>✏️ Edit Service</h1>
+    <p>All fields on this page are editable to reflect changes in your accounts:</p>
 
     <div class="section">
-        <p><strong><span class="icon">📝</span> CAMPI EDITABILI:</strong> Puoi aggiornare liberamente il Nome del Servizio, l'Utente, il Sito Web e le Note.</p>
+        <p><strong><span class="icon">📝</span> EDITABLE FIELDS:</strong> You can freely update the Service Name, Username, Website, and Notes.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🔐</span> AGGIORNAMENTO PASSWORD:</strong> Se modifichi la password, Memoria aggiornerà automaticamente la "Data di modifica" nei dettagli del servizio, aiutandoti a ricordare quanto è recente la tua chiave d'accesso.</p>
+        <p><strong><span class="icon">🔐</span> PASSWORD UPDATE:</strong> If you modify the password, Memoria will automatically update the "Modified Date" in the service details, helping you remember how recent your access key is.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🖼️</span> GESTIONE ICONA:</strong> Se modifichi l'indirizzo del Sito Web e salvi, l'app cercherà di scaricare la nuova icona corrispondente.</p>
-        <div class="tip">Se il download non va a buon fine, verrà utilizzata l'icona predefinita di Memoria.</div>
+        <p><strong><span class="icon">🖼️</span> ICON MANAGEMENT:</strong> If you change the Website address and save, the app will attempt to download the corresponding new icon.</p>
+        <div class="tip">If the download is not successful, the default Memoria icon will be used.</div>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🔘</span> PULSANTE 'ICONA':</strong> Questo tasto ti permette di scegliere manualmente quale immagine visualizzare, alternando tra l'icona scaricata dal web e quella standard dell'app.</p>
+        <p><strong><span class="icon">🔘</span> 'ICON' BUTTON:</strong> This button allows you to manually choose which image to display, toggling between the icon downloaded from the web and the app's standard icon.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">💾</span> SALVA:</strong> Tocca 'Save' per rendere effettive le modifiche nel database.</p>
+        <p><strong><span class="icon">💾</span> SAVE:</strong> Tap 'Save' to make the changes effective in the database.</p>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
