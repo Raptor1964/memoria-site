@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Aggiungi Nuovo Servizio</title>
+    <title>Help - Add New Service</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 5px; }
@@ -15,32 +29,39 @@
 </head>
 <body>
 
-    <h1>➕ Aggiungi Nuovo Servizio</h1>
-    <p>Usa questo modulo per memorizzare in modo sicuro una nuova credenziale.</p>
+    <h1>➕ Add New Service</h1>
+    <p>Use this form to securely store a new credential.</p>
 
     <div class="section">
-        <p><strong><span class="icon">🏷️</span> NOME SERVIZIO:</strong> È l'unico campo <span class="highlight">obbligatorio</span>. Indica il nome dell'applicazione o del sito (es. Google, Amazon, Banca).</p>
+        <p><strong><span class="icon">🏷️</span> SERVICE NAME:</strong> This is the only <span class="highlight">mandatory</span> field. Enter the name of the application or website (e.g., Google, Amazon, Bank).</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">👤</span> UTENTE &amp; PASSWORD:</strong> Sebbene facoltativi, sono i dati essenziali per il tuo accesso. Puoi monitorare la robustezza della password mentre la digiti.</p>
+        <p><strong><span class="icon">👤</span> USER &amp; PASSWORD:</strong> Although optional, these are the essential details for your access. You can monitor password strength as you type.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🌐</span> SITO WEB:</strong> Inserendo l'indirizzo (es. www.google.it), Memoria proverà a scaricare automaticamente l'icona ufficiale del servizio per riconoscerlo meglio nell'elenco.</p>
+        <p><strong><span class="icon">🌐</span> WEBSITE:</strong> By entering the address (e.g., www.google.com), Memoria will automatically try to download the service's official icon to help you recognize it in the list.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">📝</span> NOTE:</strong> Uno spazio libero per aggiungere informazioni extra, come domande di sicurezza o dettagli sull'abbonamento.</p>
+        <p><strong><span class="icon">📝</span> NOTES:</strong> A free space to add extra information, such as security questions or subscription details.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">💾</span> SALVA:</strong> Una volta compilati i campi desiderati, tocca il pulsante 'SALVA' per scrivere definitivamente i dati nel tuo database criptato.</p>
+        <p><strong><span class="icon">💾</span> SAVE:</strong> Once you have filled in the desired fields, tap the 'SAVE' button to permanently write the data to your encrypted database.</p>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
