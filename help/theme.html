@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<html lang="it">
+ <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Personalizzazione Tema</title>
+    <title>Help - Theme Customization</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 8px; }
@@ -16,15 +30,15 @@
 </head>
 <body>
 
-    <h1>🎨 Personalizzazione Tema</h1>
-    <p>Adatta l'aspetto visivo di Memoria ai tuoi gusti o alle condizioni di luce ambientale:</p>
+    <h1>🎨 Theme Customization</h1>
+    <p>Adapt Memoria's visual appearance to your taste or ambient lighting conditions:</p>
 
     <div class="section">
-        <p><strong><span class="icon">⚙️</span> TEMA DI SISTEMA:</strong> Attivando questa opzione, l'app seguirà automaticamente le impostazioni del tuo dispositivo (chiaro/scuro) in base all'orario o alle tue preferenze globali.</p>
+        <p><strong><span class="icon">⚙️</span> SYSTEM THEME:</strong> By activating this option, the app will automatically follow your device settings (light/dark) based on the time of day or your global preferences.</p>
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">☀️</span> TEMI CHIARI:</strong> Se preferisci un'interfaccia luminosa, puoi scegliere tra varianti come <em>'Spring'</em> o <em>'Ylenia'</em>. Offrono un contrasto elevato, ideale per l'utilizzo all'aperto.</p>
+        <p><strong><span class="icon">☀️</span> LIGHT THEMES:</strong> If you prefer a bright interface, you can choose variants like <em>'Spring'</em> or <em>'Ylenia'</em>. They offer high contrast, ideal for outdoor use.</p>
         <div class="theme-preview">
             <span class="dot" style="background-color: #ffffff;"></span>
             <span class="dot" style="background-color: #f0fdf4;"></span>
@@ -33,7 +47,7 @@
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🌙</span> TEMA SCURO:</strong> Trasforma l'interfaccia per riposare la vista. È perfetto per l'utilizzo notturno e aiuta a ridurre il consumo della batteria su schermi OLED.</p>
+        <p><strong><span class="icon">🌙</span> DARK THEME:</strong> Transform the interface to rest your eyes. It is perfect for nighttime use and helps reduce battery consumption on OLED screens.</p>
         <div class="theme-preview">
             <span class="dot" style="background-color: #1a1a1a;"></span>
             <span class="dot" style="background-color: #2d3748;"></span>
@@ -41,12 +55,19 @@
     </div>
 
     <div class="section">
-        <p><strong><span class="icon">🔄</span> CAMBIO IMMEDIATO:</strong> Non serve riavviare l'app. Selezionando un'opzione tramite i pulsanti, i colori cambieranno istantaneamente sotto i tuoi occhi.</p>
+        <p><strong><span class="icon">🔄</span> INSTANT CHANGE:</strong> No need to restart the app. By selecting an option via the buttons, the colors will change instantly before your eyes.</p>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
