@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiuto - Impostazioni</title>
+    <title>Help - Settings</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Styles to hide Google Translate toolbar and popups */
+        .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        body { 
+            top: 0 !important; 
+            font-family: sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #ffffff;
+        }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
         .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 12px; margin: 12px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 8px; }
@@ -15,36 +29,43 @@
 </head>
 <body>
 
-    <h1>⚙️ IMPOSTAZIONI DI MEMORIA</h1>
-    <p>In questa sezione puoi personalizzare l'esperienza dell'utente e proteggere i tuoi dati:</p>
+    <h1>⚙️ MEMORIA SETTINGS</h1>
+    <p>In this section, you can customize the user experience and protect your data:</p>
 
     <div class="section">
-        <span class="category">Aspetto</span>
-        <p><strong><span class="icon">🎨</span> TEMA:</strong> Scegli tra tema chiaro, per una maggiore luminosità, o tema scuro, ideale per ambienti poco illuminati.</p>
-        <p><strong><span class="icon">🔠</span> CARATTERE:</strong> Regola la dimensione del testo per rendere la lettura dei tuoi dati più comoda.</p>
+        <span class="category">Appearance</span>
+        <p><strong><span class="icon">🎨</span> THEME:</strong> Choose between Light theme for more brightness, or Dark theme, ideal for low-light environments.</p>
+        <p><strong><span class="icon">🔠</span> FONT:</strong> Adjust the text size to make reading your data more comfortable.</p>
     </div>
 
     <div class="section">
-        <span class="category">Internazionale</span>
-        <p><strong><span class="icon">🌐</span> TRADUZIONI:</strong> Cambia la lingua dell'app selezionando quella che preferisci tra le opzioni disponibili.</p>
+        <span class="category">International</span>
+        <p><strong><span class="icon">🌐</span> TRANSLATIONS:</strong> Change the app language by selecting your preferred option from the available list.</p>
     </div>
 
     <div class="section">
-        <span class="category">Sicurezza</span>
-        <p><strong><span class="icon">🔑</span> BIOMETRIA:</strong> Abilita il riconoscimento dell'impronta digitale o del volto per un accesso rapido e sicuro.</p>
-        <p><strong><span class="icon">📧</span> EMAIL DI SICUREZZA:</strong> Gestisci l'email di recupero, essenziale in caso di smarrimento della chiave principale.</p>
+        <span class="category">Security</span>
+        <p><strong><span class="icon">🔑</span> BIOMETRICS:</strong> Enable fingerprint or facial recognition for fast and secure access.</p>
+        <p><strong><span class="icon">📧</span> SECURITY EMAIL:</strong> Manage your recovery email, essential for regaining access if you lose your primary key.</p>
     </div>
 
     <div class="section">
-        <span class="category">Sistema</span>
-        <p><strong><span class="icon">🗄️</span> BANCA DATI:</strong> Strumenti avanzati per la manutenzione e la gestione tecnica dei tuoi archivi locali.</p>
-        <p><strong><span class="icon">📄</span> REGISTRO:</strong> Consulta le attività interne per verificare le operazioni effettuate dall'app.</p>
-        <p><strong><span class="icon">ℹ️</span> INFORMAZIONE:</strong> Dettagli tecnici, struttura del Memory e note generali sul progetto.</p>
+        <span class="category">System</span>
+        <p><strong><span class="icon">🗄️</span> DATABASE:</strong> Advanced tools for maintenance and technical management of your local archives.</p>
+        <p><strong><span class="icon">📄</span> LOGS:</strong> Consult the internal activity log to verify operations performed by the app.</p>
+        <p><strong><span class="icon">ℹ️</span> INFORMATION:</strong> Technical details, Memory structure, and general project notes.</p>
     </div>
 
     <footer>
         &copy; 2026 Giancarlo De Rosa - Digital Safe Memoria
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var style = document.createElement('style');
+            style.innerHTML = '.skiptranslate { display: none !important; } body { top: 0 !important; }';
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
