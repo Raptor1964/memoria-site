@@ -26,10 +26,10 @@
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
         footer { margin-top: 30px; text-align: center; font-size: 0.8em; color: #888; border-top: 1px solid #eee; padding-top: 10px; }
-        /* AGGIUNGI QUESTA REGOLA QUI SOTTO */
-    .brand-name::after {
-        content: "Memoria: Password Manager";
-    }
+     .reverse {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
     </style>
 </head>
 <body>
@@ -56,8 +56,8 @@
         <p><strong><span class="icon">➕</span> ADD ENTRY:</strong> Located in the bottom right bar, this is the quick shortcut for adding a new service to the database.</p>
     </div>
 
-   <footer class="notranslate" translate="no">
-    &copy; 2026 Giancarlo De Rosa - <span class="brand-name"></span>
+  <footer translate="no" class="notranslate">
+    &copy; 2026 Giancarlo De Rosa - <span class="reverse">reganaM drowssaP :airomeM</span>
 </footer>
 
     <script type="text/javascript">
