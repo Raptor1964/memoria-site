@@ -3,62 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativa sulla Privacy - Memoria</title>
+    <title>Informativa sulla Privacy - Memoria: Gestore Password</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; }
         h2 { color: #2980b9; margin-top: 30px; }
         .box { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
-        .legal-box { border: 1px solid #ddd; padding: 20px; margin-top: 30px; background-color: #fffafa; border-radius: 8px; }
+        .legal-box { border: 1px solid #ddd; padding: 20px; margin-top: 30px; background-color: #fcfcfc; border-radius: 8px; }
         footer { margin-top: 50px; text-align: center; font-size: 0.9em; color: #666; border-top: 1px solid #eee; padding-top: 20px; }
-        a { color: #2980b9; text-decoration: none; }
+        a { color: #2980b9; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
-<div style="text-align: center; margin-bottom: 20px;">
-        <img src="logo.png" alt="Logo Digital Safe Memoria" style="max-width: 80px; height: auto;">
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo Digital Safe Memoria" style="max-width: 80px; height: auto;">
+        </a>
     </div>
+
     <h1>Informativa sulla Privacy</h1>
     <p><em>Ultimo aggiornamento: 04 Marzo 2026</em></p>
 
-    <p>Questa informativa descrive il trattamento dei dati personali operato dall'applicazione <strong>Memoria</strong> sviluppata da <strong>Giancarlo De Rosa</strong>.</p>
+    <p>Questa Informativa sulla Privacy descrive le modalità di trattamento dei dati personali relative all'utilizzo dell'applicazione mobile <strong>Memoria: Password Manager</strong> (di seguito "Applicazione"), sviluppata da <strong>Giancarlo De Rosa</strong>.</p>
 
-    <h2>1. Raccolta dei Dati e Finalità</h2>
-    <p>L'applicazione è progettata per funzionare principalmente in modalità locale. Tuttavia, raccoglie i seguenti dati per finalità specifiche:</p>
+    <h2>1. Principi Generali e Raccolta Dati</h2>
+    <p>L'Applicazione è progettata secondo il principio della <strong>minimizzazione dei dati</strong> e della sicurezza locale. Di default, nessun dato personale viene inviato a server esterni.</p>
+    
     <ul>
-        <li><strong>Indirizzo Email:</strong> Utilizzato esclusivamente su richiesta dell'utente per il servizio di recupero della password di accesso all'app.</li>
-        <li><strong>Account Google:</strong> Necessario per abilitare la funzione di backup opzionale su Google Drive.</li>
+        <li><strong>Dati del Caveau (Account e Password):</strong> Tutti i dati inseriti dall'utente (username, password, note) sono salvati esclusivamente in locale sul dispositivo. Lo Sviluppatore non ha alcun accesso a tali dati.</li>
+        <li><strong>Indirizzo Email (Opzionale):</strong> L'inserimento dell'indirizzo email è <strong>facoltativo e disattivato di default</strong>. Viene richiesto solo ed esclusivamente se l'utente sceglie di attivare la funzione opzionale di <em>Recupero Assistito</em>.</li>
+        <li><strong>Account Google (Opzionale):</strong> Necessario unicamente se l'utente decide di attivare la funzione di backup personale su Google Drive.</li>
     </ul>
 
     <h2>2. Utilizzo di Google Drive (Scope OAuth)</h2>
     <div class="box">
-        <p>L'app richiede l'accesso alle API di Google Drive con lo scope <code>https://www.googleapis.com/auth/drive.file</code>.</p>
-        <p><strong>Cosa significa:</strong> L'app può visualizzare, creare e gestire solo i file e le cartelle che essa stessa ha creato. Non ha alcun accesso ai tuoi altri file personali presenti su Drive.</p>
+        <p>Per la funzione di backup opzionale, l'Applicazione richiede l'accesso alle API di Google Drive tramite lo scope ristretto: <br><code>https://www.googleapis.com/auth/drive.file</code></p>
+        <p><strong>Cosa significa:</strong> L'Applicazione può accedere, creare e gestire esclusivamente i file e le cartelle da essa stessa generati. Non ha alcun tipo di accesso agli altri file o documenti personali presenti sul tuo account Google Drive.</p>
     </div>
 
-    <h2>3. Servizio di Recupero Account</h2>
-    <p>Qualora l'utente dimentichi la password d'accesso, può richiedere l'invio delle credenziali tramite email. È <strong>obbligo dell'utente</strong> modificare la password immediatamente dopo il primo accesso utile per ripristinare la sicurezza del database locale.</p>
-
-    <h2>4. Conservazione e Sicurezza</h2>
+    <h2>3. Servizio Opzionale di Recupero Account</h2>
+    <p>Di default, se l'utente smarrisce la Master Password, il database locale è <strong>irrecuperabile</strong>. Se l'utente sceglie di attivare la funzione opzionale di recupero:</p>
     <ul>
-        <li>I dati degli account salvati sono crittografati localmente sul dispositivo.</li>
-        <li>Gli indirizzi email e i dati tecnici di invio vengono cancellati periodicamente (mai oltre i 90 giorni).</li>
-        <li>Nessun dato viene venduto o condiviso con terze parti.</li>
+        <li>La password viene conservata in modo sicuro nel sistema protetto del dispositivo (Android Keystore / SecureStorage).</li>
+        <li>In caso di richiesta di ripristino, le credenziali vengono inviate all'indirizzo email specificato dall'utente.</li>
+        <li>È responsabilità dell'utente modificare la Master Password immediatamente dopo il ripristino per garantire la massima sicurezza del database.</li>
+    </ul>
+
+    <h2>4. Conservazione, Sicurezza e Crittografia</h2>
+    <ul>
+        <li><strong>Standard di Crittografia:</strong> I dati del caveau sono protetti tramite crittografia <strong>AES-256-GCM</strong>. La derivazione della chiave avviene tramite l'algoritmo standard di settore <strong>Argon2id</strong>.</li>
+        <li><strong>Nessun Tracciamento:</strong> L'Applicazione non utilizza strumenti di analisi (analytics), non mostra pubblicità e non traccia il comportamento dell'utente.</li>
+        <li><strong>Nessuna Cessione a Terzi:</strong> Nessun dato personale o tecnico viene venduto, ceduto o condiviso con terze parti per scopi commerciali.</li>
     </ul>
 
     <div class="legal-box">
         <h2>5. Termini di Utilizzo</h2>
-        <p>È possibile utilizzare l'Applicazione per scopi privati o aziendali in conformità con il presente documento e con i termini di utilizzo forniti dall'app store in cui è stata scaricata l'Applicazione: <a href="https://play.google.com/intl/it_it/about/play-terms/" target="_blank">Termini di servizio di Google Play</a>.</p>
+        <p>L'Applicazione può essere utilizzata per scopi personali o professionali in conformità con la presente informativa e con i termini di servizio dello store di distribuzione: <a href="https://play.google.com/intl/it_it/about/play-terms/" target="_blank" rel="noopener">Termini di servizio di Google Play</a>.</p>
 
-        <h2>6. Garanzia</h2>
-        <p>Lo Sviluppatore non fornisce alcuna garanzia e non è responsabile per eventuali perdite o danni che possono essere correlati all'utilizzo dell'Applicazione. Ti assumi l'intera responsabilità utilizzando l'Applicazione.</p>
+        <h2>6. Esclusione di Responsabilità</h2>
+        <p>Lo Sviluppatore non fornisce garanzie esplicite o implicite e non è responsabile per eventuali perdite di dati, danni diretti o indiretti derivanti dall'uso dell'Applicazione o dallo smarrimento delle credenziali di accesso da parte dell'utente.</p>
     </div>
 
     <h2>7. Contatti</h2>
-    <p>Per qualsiasi domanda riguardante la privacy, puoi scrivere a: <strong>memoriaapp64@gmail.com</strong></p>
+    <p>Per qualsiasi chiarimento o richiesta relativa alla privacy e al trattamento dei dati, è possibile contattare lo sviluppatore all'indirizzo email: <a href="mailto:memoriaapp64@gmail.com"><strong>memoriaapp64@gmail.com</strong></a></p>
 
     <footer>
-        <p><a href="index.html">Torna alla Home Page</a></p>
+        <p><a href="index.html">&larr; Torna alla Home Page</a></p>
         <p>&copy; 2026 Giancarlo De Rosa - Memoria: Password Manager</p>
     </footer>
 
