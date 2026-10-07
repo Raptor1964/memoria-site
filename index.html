@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YY6vXj_owMVfDyboP6oXjEadIAuptWsFOmvhukXmXQI">
+    <title>Memoria: Password Manager | Your Vault for Digital Accounts</title>
+    <meta name="description" content="Memoria is a free, ad-free Android password manager. Local AES-256-GCM encrypted vault, optional Google Drive backup, biometric unlock.">
+    <meta property="og:title" content="Memoria: Password Manager">
+    <meta property="og:description" content="Free, ad-free Android password manager with a local encrypted vault.">
+    <meta property="og:image" content="https://raptor1964.github.io/memoria-site/logo.png">
+
+    <link rel="alternate" hreflang="en" href="https://raptor1964.github.io/memoria-site/index.html">
+    <link rel="alternate" hreflang="it" href="https://raptor1964.github.io/memoria-site/it/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://raptor1964.github.io/memoria-site/index.html">
+
+    <script>
+    (function () {
+        try {
+            if (localStorage.getItem('lang')) return;
+            var l = (navigator.language || '').toLowerCase();
+            if (l.indexOf('it') === 0) location.replace('it/index.html');
+        } catch (e) {}
+    })();
+    </script>
+
+    <style>
+        :root { --bg:#ffffff; --fg:#2b2f36; --muted:#6b7280; --card:#f4f7fb; --accent:#1c46a3; }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg:#10141b; --fg:#e6e9ee; --muted:#9aa3b2; --card:#1a212c; --accent:#6f95ee; }
+        }
+        * { box-sizing: border-box; }
+        body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.65; color:var(--fg); background:var(--bg); }
+        .wrap { max-width: 860px; margin: 0 auto; padding: 20px; }
+        .lang { text-align:right; font-size:.9em; }
+        .lang a { color:var(--accent); text-decoration:none; font-weight:600; }
+        .lang .current { font-weight:700; }
+        header { text-align:center; padding: 20px 0 10px; }
+        header img { width:96px; height:96px; max-width:100%; }
+        h1 { font-size:2em; margin:.4em 0 .2em; }
+        .tagline { color:var(--muted); margin:0 0 12px; }
+        .badges span { display:inline-block; background:var(--card); border-radius:999px; padding:4px 12px; margin:3px; font-size:.85em; }
+        .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 24px; border-radius:10px; font-weight:600; margin:18px 0; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:20px 0; }
+        .card { background:var(--card); border-radius:12px; padding:16px; }
+        .card h3 { margin:0 0 6px; font-size:1.05em; }
+        .card p { margin:0; font-size:.95em; }
+        .tag { font-size:.75em; background:var(--accent); color:#fff; border-radius:6px; padding:1px 8px; margin-left:6px; vertical-align:middle; }
+        h2 { margin-top:36px; border-bottom:3px solid var(--accent); padding-bottom:6px; font-size:1.4em; }
+        h4 { margin:18px 0 4px; }
+        .note { border-left:5px solid var(--accent); background:var(--card); padding:12px 16px; border-radius:0 10px 10px 0; margin:14px 0; }
+        footer { margin-top:40px; padding-top:14px; border-top:1px solid var(--card); text-align:center; font-size:.85em; color:var(--muted); }
+        footer a { color:var(--accent); }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <div class="lang">
+        <span class="current">EN</span> |
+        <a href="it/index.html" onclick="try{localStorage.setItem('lang','it')}catch(e){}">IT</a>
+    </div>
+
+    <header>
+        <img src="logo.png" alt="Memoria Password Manager logo">
+        <h1>Memoria: Password Manager</h1>
+        <p class="tagline">Secure storage for your accounts. Simple, free, ethical.</p>
+        <div class="badges"><span>Free</span><span>No subscription</span><span>Zero ads</span><span>Android</span></div>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.companyname.Memoria&amp;hl=en">Get it on Google Play</a>
+    </header>
+
+    <div class="grid">
+        <div class="card"><h3>🔒 Encrypted Vault</h3><p>Your accounts never travel to unknown servers. Everything is stored in a local database on your phone with <strong>AES-256-GCM encryption</strong>.</p></div>
+        <div class="card"><h3>☁️ Personal Backup</h3><p>Use your own Google Drive space for backups. The app only accesses the files it creates itself (<code>drive.file</code> scope), keeping all your other documents private.</p></div>
+        <div class="card"><h3>👆 Biometric Unlock</h3><p>Unlock the app instantly with your fingerprint or face recognition, without typing your password every time.</p></div>
+        <div class="card"><h3>🔑 Key Derivation</h3><p>Your master password is processed with <strong>Argon2id</strong> to derive the encryption key, following industry standards.</p></div>
+        <div class="card"><h3>🛡️ Zero Tracking</h3><p>No ads, no analytics, no selling data to third parties.</p></div>
+        <div class="card"><h3>📧 Assisted Recovery <span class="tag">Optional</span></h3><p><strong>Off by default.</strong> If enabled, lets you recover your master password by email. Without it, the vault is <strong>unrecoverable</strong> if you forget the password.</p></div>
+    </div>
+
+    <h2>Why choose Memoria?</h2>
+    <p>In a world dominated by subscriptions and opaque clouds, Memoria gives you back full control. It is the ideal tool if you want a digital vault without technical complications.</p>
+    <p>Organize your entries by category (websites, cards, bank accounts, documents, notes), find anything instantly with search, and recognize services at a glance thanks to their icons.</p>
+
+    <h2>How security works</h2>
+
+    <h4>🔐 By default: maximum security</h4>
+    <p>When you install Memoria, <strong>no personal data is collected</strong> and your master password is <strong>never stored</strong> anywhere. If you forget it, the vault is lost forever. It is your fortress, and you hold the only key.</p>
+
+    <h4>📧 If you enable recovery (optional)</h4>
+    <p>Only on your explicit request: you enter your email address and the app verifies it by sending you a one-time code. Once the code matches, the email is saved in the app, and your master password is kept <strong>encrypted</strong> on the device. If you ever request recovery, the app sends the password to that verified address. You can turn this feature on or off at any time.</p>
+    <div class="note"><strong>Trade-off to be aware of:</strong> email is not a fully secure channel. Anyone who gains access to that mailbox could obtain your master password, so enable this option only if you accept that risk, and protect the mailbox with two-factor authentication.</div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h4>Is Memoria really free?</h4>
+    <p>Yes, completely. No subscription, no Pro version, zero ads.</p>
+
+    <h4>Does my data end up on any server?</h4>
+    <p>No. The database stays on your phone. The only external connections are the optional Google Drive backup, managed directly by you, and, only if you enable recovery, the verification code and recovery email.</p>
+
+    <h4>What happens if I forget my password?</h4>
+    <p>If you have not enabled email recovery, the vault is <strong>unrecoverable</strong>. That is the price of real security.</p>
+
+    <h4>Can I use Memoria for business purposes?</h4>
+    <p>Yes, the app can be used for both personal and professional purposes.</p>
+
+    <h2>Ready to take back control?</h2>
+    <p>Download Memoria for free from Google Play.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.companyname.Memoria&amp;hl=en">Get it on Google Play</a>
+
+    <h2>Transparency and Responsibility</h2>
+    <p><strong>Terms of Use:</strong> The Application may be used for private or commercial purposes in accordance with the <a href="https://play.google.com/about/play-terms/">Google Play Terms of Service</a>.</p>
+    <p><strong>Disclaimer:</strong> The Developer provides no warranties and is not liable for any loss or damage arising from use of the Application. The user assumes full responsibility for its use.</p>
+
+    <footer>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="mailto:memoriaapp64@gmail.com">Contact the Developer</a></p>
+        <p>&copy; 2026 Giancarlo De Rosa | Memoria: Password Manager</p>
+    </footer>
+
+</div>
+</body>
+</html>
