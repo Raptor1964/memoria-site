@@ -3,78 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativa sulla Privacy - Memoria: Gestore Password</title>
+    <title>Informativa sulla Privacy - Memoria: Password Manager</title>
+    <meta name="description" content="Informativa sulla privacy di Memoria: Password Manager, gestore di password gratuito per Android con cassaforte cifrata locale.">
+
+    <link rel="icon" href="https://raptor1964.github.io/memoria-site/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://raptor1964.github.io/memoria-site/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raptor1964.github.io/memoria-site/logo.png">
+
+    <link rel="alternate" hreflang="en" href="https://raptor1964.github.io/memoria-site/privacy.html">
+    <link rel="alternate" hreflang="it" href="https://raptor1964.github.io/memoria-site/it/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://raptor1964.github.io/memoria-site/privacy.html">
+
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; }
-        h2 { color: #2980b9; margin-top: 30px; }
-        .box { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
-        .legal-box { border: 1px solid #ddd; padding: 20px; margin-top: 30px; background-color: #fcfcfc; border-radius: 8px; }
-        footer { margin-top: 50px; text-align: center; font-size: 0.9em; color: #666; border-top: 1px solid #eee; padding-top: 20px; }
-        a { color: #2980b9; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        :root { --bg:#ffffff; --fg:#2b2f36; --muted:#6b7280; --card:#f4f7fb; --accent:#1c46a3; --line:#dde3ec; }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg:#10141b; --fg:#e6e9ee; --muted:#9aa3b2; --card:#1a212c; --accent:#6f95ee; --line:#2a3342; }
+        }
+        * { box-sizing: border-box; }
+        body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.7; color:var(--fg); background:var(--bg); }
+        .wrap { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .lang { text-align:right; font-size:.9em; }
+        .lang a { color:var(--accent); text-decoration:none; font-weight:600; }
+        .lang .current { font-weight:700; }
+        .logo { text-align:center; margin: 10px 0 20px; }
+        .logo img { width:80px; height:auto; max-width:100%; }
+        h1 { border-bottom:3px solid var(--accent); padding-bottom:10px; font-size:1.7em; }
+        h2 { color:var(--accent); margin-top:30px; font-size:1.25em; }
+        a { color:var(--accent); }
+        ul { padding-left:20px; }
+        li { margin-bottom:8px; }
+        .box { background:var(--card); border-left:5px solid var(--accent); padding:12px 18px; margin:16px 0; border-radius:0 10px 10px 0; }
+        .legal-box { border:1px solid var(--line); padding:6px 20px 14px; margin-top:30px; border-radius:8px; }
+        code { word-break:break-all; }
+        footer { margin-top:44px; text-align:center; font-size:.9em; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; }
     </style>
 </head>
 <body>
+<div class="wrap">
 
-    <div style="text-align: center; margin-bottom: 20px;">
-        <a href="index.html">
-            <img src="logo.png" alt="Logo Digital Safe Memoria" style="max-width: 80px; height: auto;">
-        </a>
+    <div class="lang">
+        <a href="../privacy.html" onclick="try{localStorage.setItem('lang','en')}catch(e){}">EN</a> |
+        <span class="current">IT</span>
+    </div>
+
+    <div class="logo">
+        <a href="index.html"><img src="https://raptor1964.github.io/memoria-site/logo.png" alt="Logo Memoria Gestore Password"></a>
     </div>
 
     <h1>Informativa sulla Privacy</h1>
-    <p><em>Ultimo aggiornamento: 16 Settembre 2026</em></p>
+    <p><em>Ultimo aggiornamento: 7 ottobre 2026</em></p>
 
-    <p>Questa Informativa sulla Privacy descrive le modalità di trattamento dei dati personali relative all'utilizzo dell'applicazione mobile <strong>Memoria: Password Manager</strong> (di seguito "Applicazione"), sviluppata da <strong>Giancarlo De Rosa</strong>.</p>
+    <p>Questa Informativa sulla Privacy descrive le modalità di trattamento dei dati personali relative all'utilizzo dell'applicazione mobile <strong translate="no">Memoria: Password Manager</strong> (di seguito "Applicazione"), sviluppata da <strong translate="no">Giancarlo De Rosa</strong>.</p>
 
     <h2>1. Principi Generali e Raccolta Dati</h2>
-    <p>L'Applicazione è progettata secondo il principio della <strong>minimizzazione dei dati</strong> e della sicurezza locale. Di default, nessun dato personale viene inviato a server esterni.</p>
-    
+    <p>L'Applicazione è progettata secondo il principio della <strong>minimizzazione dei dati</strong> e della sicurezza locale. Di default, l'Applicazione non invia a nessun server i dati della tua cassaforte né altri dati personali.</p>
     <ul>
-        <li><strong>Dati del Caveau (Account e Password):</strong> Tutti i dati inseriti dall'utente (username, password, note) sono salvati esclusivamente in locale sul dispositivo. Lo Sviluppatore non ha alcun accesso a tali dati.</li>
-        <li><strong>Indirizzo Email (Opzionale):</strong> L'inserimento dell'indirizzo email è <strong>facoltativo e disattivato di default</strong>. Viene richiesto solo ed esclusivamente se l'utente sceglie di attivare la funzione opzionale di <em>Recupero Assistito</em>.</li>
-        <li><strong>Account Google (Opzionale):</strong> Necessario unicamente se l'utente decide di attivare la funzione di backup personale su Google Drive.</li>
+        <li><strong>Dati della Cassaforte (account e password):</strong> tutto ciò che inserisci (username, password, note, carte, documenti) è salvato esclusivamente sul tuo dispositivo. Lo Sviluppatore non ha alcun accesso a tali dati.</li>
+        <li><strong>Indirizzo email (opzionale):</strong> l'inserimento dell'indirizzo email è <strong>facoltativo e disattivato di default</strong>. Viene richiesto solo se scegli di attivare la funzione opzionale di <em>Recupero Assistito</em>.</li>
+        <li><strong>Account Google (opzionale):</strong> necessario unicamente se scegli di attivare il backup personale su Google Drive.</li>
     </ul>
 
     <h2>2. Utilizzo di Google Drive (Scope OAuth)</h2>
     <div class="box">
-        <p>Per la funzione di backup opzionale, l'Applicazione richiede l'accesso alle API di Google Drive tramite lo scope ristretto: <br><code>https://www.googleapis.com/auth/drive.file</code></p>
-        <p><strong>Cosa significa:</strong> L'Applicazione può accedere, creare e gestire esclusivamente i file e le cartelle da essa stessa generati. Non ha alcun tipo di accesso agli altri file o documenti personali presenti sul tuo account Google Drive.</p>
+        <p>Per la funzione di backup opzionale, l'Applicazione richiede l'accesso alle API di Google Drive tramite lo scope ristretto:<br><code>https://www.googleapis.com/auth/drive.file</code></p>
+        <p><strong>Cosa significa:</strong> l'Applicazione può accedere, creare e gestire esclusivamente i file e le cartelle da essa stessa generati. Non ha alcun accesso agli altri file o documenti personali presenti sul tuo Google Drive.</p>
     </div>
 
-    <h2>3. Servizio Opzionale di Recupero Account</h2>
-    <p>Di default, se l'utente smarrisce la Master Password, il database locale è <strong>irrecuperabile</strong>. Se l'utente sceglie di attivare la funzione opzionale di recupero:</p>
+    <h2>3. Recupero Assistito (opzionale)</h2>
+    <p>Di default, se smarrisci la Master Password, il database locale è <strong>irrecuperabile</strong>. Se scegli di attivare la funzione opzionale di recupero:</p>
     <ul>
-        <li>La password viene conservata in modo sicuro nel sistema protetto del dispositivo (Android Keystore / SecureStorage).</li>
-        <li>In caso di richiesta di ripristino, le credenziali vengono inviate all'indirizzo email specificato dall'utente.</li>
-        <li>È responsabilità dell'utente modificare la Master Password immediatamente dopo il ripristino per garantire la massima sicurezza del database.</li>
+        <li>inserisci il tuo indirizzo email e l'Applicazione lo verifica inviandoti un codice monouso. Quando il codice corrisponde, l'indirizzo viene salvato nell'Applicazione, sul tuo dispositivo;</li>
+        <li>la tua Master Password viene conservata <strong>in forma cifrata</strong> sul tuo dispositivo;</li>
+        <li>se richiedi il recupero, l'Applicazione invia la password all'indirizzo email verificato;</li>
+        <li>puoi disattivare questa funzione in qualsiasi momento.</li>
     </ul>
+    <div class="box">
+        <p><strong>Attenzione:</strong> l'email non è un canale del tutto sicuro. Chiunque ottenga l'accesso a quella casella potrebbe ricevere la tua Master Password. Abilita questa opzione solo se accetti il rischio, proteggi la casella con l'autenticazione a due fattori e modifica la Master Password subito dopo il recupero.</p>
+    </div>
 
-    <h2>4. Conservazione, Sicurezza e Crittografia</h2>
+    <h2>4. Connessioni di Rete</h2>
+    <p>Oltre alle funzioni opzionali descritte sopra (backup su Google Drive ed email di recupero), l'Applicazione si collega a internet solo quando inserisci un <strong>indirizzo web</strong> in una voce: in quel caso scarica l'<strong>icona</strong> (favicon) di quel sito da mostrare accanto alla voce. Se non inserisci alcun indirizzo web, non viene effettuata nessuna connessione e viene usata l'icona predefinita della categoria. Come ogni richiesta web, questo rivela al server contattato il tuo indirizzo IP e il sito di cui viene richiesta l'icona. Non vengono inviati password, username, note o altri contenuti della cassaforte.</p>
+
+    <h2>5. Conservazione, Sicurezza e Crittografia</h2>
     <ul>
-        <li><strong>Standard di Crittografia:</strong> I dati del caveau sono protetti tramite crittografia <strong>AES-256-GCM</strong>. La derivazione della chiave avviene tramite l'algoritmo standard di settore <strong>Argon2id</strong>.</li>
-        <li><strong>Nessun Tracciamento:</strong> L'Applicazione non utilizza strumenti di analisi (analytics), non mostra pubblicità e non traccia il comportamento dell'utente.</li>
-        <li><strong>Nessuna Cessione a Terzi:</strong> Nessun dato personale o tecnico viene venduto, ceduto o condiviso con terze parti per scopi commerciali.</li>
+        <li><strong>Crittografia:</strong> i dati della cassaforte sono protetti con crittografia <strong>AES-256-GCM</strong>. La chiave di cifratura viene derivata dalla tua Master Password con l'algoritmo <strong>Argon2id</strong>.</li>
+        <li><strong>Nessun tracciamento:</strong> l'Applicazione non utilizza strumenti di analisi (analytics), non mostra pubblicità e non traccia il comportamento dell'utente.</li>
+        <li><strong>Nessuna cessione a terzi:</strong> nessun dato personale o tecnico viene venduto, ceduto o condiviso con terze parti per scopi commerciali.</li>
     </ul>
 
     <div class="legal-box">
-        <h2>5. Termini di Utilizzo</h2>
+        <h2>6. Termini di Utilizzo</h2>
         <p>L'Applicazione può essere utilizzata per scopi personali o professionali in conformità con la presente informativa e con i termini di servizio dello store di distribuzione: <a href="https://play.google.com/intl/it_it/about/play-terms/" target="_blank" rel="noopener">Termini di servizio di Google Play</a>.</p>
 
-        <h2>6. Esclusione di Responsabilità</h2>
+        <h2>7. Esclusione di Responsabilità</h2>
         <p>Lo Sviluppatore non fornisce garanzie esplicite o implicite e non è responsabile per eventuali perdite di dati, danni diretti o indiretti derivanti dall'uso dell'Applicazione o dallo smarrimento delle credenziali di accesso da parte dell'utente.</p>
     </div>
 
-    <h2>7. Contatti</h2>
-    <p>Per qualsiasi chiarimento o richiesta relativa alla privacy e al trattamento dei dati, è possibile contattare lo sviluppatore all'indirizzo email: <a href="mailto:memoriaapp64@gmail.com"><strong>memoriaapp64@gmail.com</strong></a></p>
+    <h2>8. Contatti</h2>
+    <p>Per qualsiasi chiarimento o richiesta relativa alla privacy e al trattamento dei dati, puoi contattare lo sviluppatore all'indirizzo email: <a href="mailto:memoriaapp64@gmail.com"><strong>memoriaapp64@gmail.com</strong></a></p>
 
     <footer>
         <p><a href="index.html">&larr; Torna alla Home Page</a></p>
-        <p>&copy; 2026 Giancarlo De Rosa - Memoria: Password Manager</p>
+        <p translate="no">&copy; 2026 Giancarlo De Rosa - Memoria: Password Manager</p>
     </footer>
 
+</div>
 </body>
 </html>
