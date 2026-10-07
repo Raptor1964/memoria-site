@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Memoria: Password Manager</title>
+    <meta name="description" content="Privacy Policy of Memoria: Password Manager, a free Android password manager with a local encrypted vault.">
+
+    <link rel="icon" href="https://raptor1964.github.io/memoria-site/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://raptor1964.github.io/memoria-site/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raptor1964.github.io/memoria-site/logo.png">
+
+    <link rel="alternate" hreflang="en" href="https://raptor1964.github.io/memoria-site/privacy.html">
+    <link rel="alternate" hreflang="it" href="https://raptor1964.github.io/memoria-site/it/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://raptor1964.github.io/memoria-site/privacy.html">
+
+    <script>
+    (function () {
+        try {
+            if (localStorage.getItem('lang')) return;
+            var l = (navigator.language || '').toLowerCase();
+            if (l.indexOf('it') === 0) location.replace('it/privacy.html');
+        } catch (e) {}
+    })();
+    </script>
+
+    <style>
+        :root { --bg:#ffffff; --fg:#2b2f36; --muted:#6b7280; --card:#f4f7fb; --accent:#1c46a3; --line:#dde3ec; }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg:#10141b; --fg:#e6e9ee; --muted:#9aa3b2; --card:#1a212c; --accent:#6f95ee; --line:#2a3342; }
+        }
+        * { box-sizing: border-box; }
+        body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.7; color:var(--fg); background:var(--bg); }
+        .wrap { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .lang { text-align:right; font-size:.9em; }
+        .lang a { color:var(--accent); text-decoration:none; font-weight:600; }
+        .lang .current { font-weight:700; }
+        .logo { text-align:center; margin: 10px 0 20px; }
+        .logo img { width:80px; height:auto; max-width:100%; }
+        h1 { border-bottom:3px solid var(--accent); padding-bottom:10px; font-size:1.7em; }
+        h2 { color:var(--accent); margin-top:30px; font-size:1.25em; }
+        a { color:var(--accent); }
+        ul { padding-left:20px; }
+        li { margin-bottom:8px; }
+        .box { background:var(--card); border-left:5px solid var(--accent); padding:12px 18px; margin:16px 0; border-radius:0 10px 10px 0; }
+        .legal-box { border:1px solid var(--line); padding:6px 20px 14px; margin-top:30px; border-radius:8px; }
+        code { word-break:break-all; }
+        footer { margin-top:44px; text-align:center; font-size:.9em; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <div class="lang">
+        <span class="current">EN</span> |
+        <a href="it/privacy.html" onclick="try{localStorage.setItem('lang','it')}catch(e){}">IT</a>
+    </div>
+
+    <div class="logo">
+        <a href="index.html"><img src="https://raptor1964.github.io/memoria-site/logo.png" alt="Memoria Password Manager logo"></a>
+    </div>
+
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: October 7, 2026</em></p>
+
+    <p>This Privacy Policy describes how personal data is handled when you use the mobile application <strong translate="no">Memoria: Password Manager</strong> (the "App"), developed by <strong translate="no">Giancarlo De Rosa</strong>.</p>
+
+    <h2>1. General Principles and Data Collection</h2>
+    <p>The App is designed around <strong>data minimization</strong> and local security. By default, the App does not send your vault data or any personal data to any server.</p>
+    <ul>
+        <li><strong>Vault data (accounts and passwords):</strong> everything you enter (usernames, passwords, notes, cards, documents) is stored exclusively on your device. The Developer has no access to it.</li>
+        <li><strong>Email address (optional):</strong> providing an email address is <strong>optional and off by default</strong>. It is requested only if you choose to enable the optional <em>Assisted Recovery</em> feature.</li>
+        <li><strong>Google account (optional):</strong> required only if you choose to enable the personal backup to Google Drive.</li>
+    </ul>
+
+    <h2>2. Use of Google Drive (OAuth Scope)</h2>
+    <div class="box">
+        <p>For the optional backup feature, the App requests access to the Google Drive API with the restricted scope:<br><code>https://www.googleapis.com/auth/drive.file</code></p>
+        <p><strong>What this means:</strong> the App can access, create and manage only the files and folders it has created itself. It has no access to any other file or personal document in your Google Drive.</p>
+    </div>
+
+    <h2>3. Optional Account Recovery</h2>
+    <p>By default, if you lose your Master Password, the local database is <strong>unrecoverable</strong>. If you choose to enable the optional recovery feature:</p>
+    <ul>
+        <li>You enter your email address and the App verifies it by sending you a one-time code. Once the code matches, the address is saved in the App, on your device.</li>
+        <li>Your Master Password is kept <strong>encrypted</strong> on your device.</li>
+        <li>If you request recovery, the App sends the password to the verified email address.</li>
+        <li>You can turn this feature off at any time.</li>
+    </ul>
+    <div class="box">
+        <p><strong>Please note:</strong> email is not a fully secure channel. Anyone who gains access to that mailbox could obtain your Master Password. Enable this option only if you accept this risk, protect the mailbox with two-factor authentication, and change your Master Password immediately after recovering it.</p>
+    </div>
+
+    <h2>4. Network Connections</h2>
+    <p>Apart from the optional features described above (Google Drive backup and recovery emails), the App connects to the internet only when you enter a <strong>web address</strong> in an entry: in that case it downloads the <strong>icon</strong> (favicon) of that site to show next to the entry. If you do not enter a web address, no connection is made and a default category icon is used. Like any web request, this reveals to the contacted server your IP address and the site whose icon is requested. No passwords, usernames, notes or other vault contents are sent.</p>
+
+    <h2>5. Storage, Security and Encryption</h2>
+    <ul>
+        <li><strong>Encryption:</strong> vault data is protected with <strong>AES-256-GCM</strong> encryption. The encryption key is derived from your Master Password with the <strong>Argon2id</strong> algorithm.</li>
+        <li><strong>No tracking:</strong> the App does not use analytics tools, does not show ads and does not track user behavior.</li>
+        <li><strong>No sharing with third parties:</strong> no personal or technical data is sold, transferred or shared with third parties for commercial purposes.</li>
+    </ul>
+
+    <div class="legal-box">
+        <h2>6. Terms of Use</h2>
+        <p>The App may be used for personal or professional purposes in accordance with this policy and with the terms of service of the distribution store: <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>.</p>
+
+        <h2>7. Disclaimer</h2>
+        <p>The Developer provides no express or implied warranties and is not liable for any data loss or direct or indirect damage arising from the use of the App or from the loss of access credentials by the user.</p>
+    </div>
+
+    <h2>8. Contact</h2>
+    <p>For any question or request regarding privacy and data handling, you can contact the developer at: <a href="mailto:memoriaapp64@gmail.com"><strong>memoriaapp64@gmail.com</strong></a></p>
+
+    <footer>
+        <p><a href="index.html">&larr; Back to Home</a></p>
+        <p translate="no">&copy; 2026 Giancarlo De Rosa - Memoria: Password Manager</p>
+    </footer>
+
+</div>
+</body>
+</html>
