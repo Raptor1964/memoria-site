@@ -21,6 +21,7 @@
             background-color: #ffffff;
         }
         h1 { color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 10px; font-size: 1.5em; }
+        h2 { color: #7f8c8d; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; margin: 28px 0 0; }
         .section { background: #f9f9f9; border-left: 5px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
         .icon { font-size: 1.2em; margin-right: 8px; }
         .warning { color: #c0392b; font-weight: bold; background: #fdedec; padding: 10px; border-radius: 5px; border-left: 5px solid #c0392b; margin-top: 5px; }
@@ -32,6 +33,8 @@
     <h1>🗄️ Database Management</h1>
     <p>On this page, you can manage the security and integrity of your archives with the following options:</p>
 
+    <h2>Local data management</h2>
+
     <div class="section">
         <p><strong><span class="icon">💾</span> BACKUP:</strong> Saves a security copy of the database in the app's reserved space on your phone. Useful for creating a quick restore point.</p>
     </div>
@@ -40,6 +43,29 @@
         <p><strong><span class="icon">⏪</span> RESTORE:</strong> Deletes the current database and loads the last locally saved backup.</p>
         <div class="warning">Warning: Any data entered after the last backup will be lost.</div>
     </div>
+
+    <div class="section">
+        <p><strong><span class="icon">🖨️</span> PRINT:</strong> Prints your entries, or saves them as a PDF using the print dialog of your phone.</p>
+        <div class="warning">The printout is not encrypted: keep it in a safe place.</div>
+    </div>
+
+    <div class="section">
+        <p><strong><span class="icon">📄</span> EXPORT CSV:</strong> Saves all your entries, for every category, in a CSV file that you can open with a spreadsheet.</p>
+        <div class="warning">The CSV file is not encrypted: delete it after use.</div>
+    </div>
+
+    <div class="section">
+        <p><strong><span class="icon">📑</span> IMPORT CSV:</strong> Loads entries from a CSV file. It uses the same file format created by Export CSV.</p>
+    </div>
+
+    <h2>Security</h2>
+
+    <div class="section">
+        <p><strong><span class="icon">🔑</span> NEW KEY:</strong> Changes the <strong>AES-256</strong> encryption key of the database.</p>
+        <div class="warning">This is the digital lock that protects your data: make sure you do not forget the new key!</div>
+    </div>
+
+    <h2>Cloud management</h2>
 
     <div class="section">
         <p><strong><span class="icon">📤</span> SHARE DATA:</strong> Exports an encrypted copy to external storage or cloud services to move it to another device.</p>
@@ -51,11 +77,6 @@
 
     <div class="section">
         <p><strong><span class="icon">☁️</span> GOOGLE DRIVE:</strong> Access the configuration to sync, save, or restore your backups directly to the Google cloud.</p>
-    </div>
-
-    <div class="section">
-        <p><strong><span class="icon">🔑</span> NEW KEY:</strong> Changes the <strong>AES-256</strong> encryption key of the database.</p>
-        <div class="warning">This is the digital lock that protects your data: make sure you do not forget the new key!</div>
     </div>
 
     <footer translate="no">
